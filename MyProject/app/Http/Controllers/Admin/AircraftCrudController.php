@@ -8,6 +8,9 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\AircraftRequest as StoreRequest;
 use App\Http\Requests\AircraftRequest as UpdateRequest;
 use App\Models\Owner;
+use App\Models\Aircraft;
+use Storage;
+use Image;
 
 /**
  * Class AircraftCrudController
@@ -36,7 +39,9 @@ class AircraftCrudController extends CrudController
     //   $this->crud->setFromDb();
     $this->crud->addColumn([
       'label' => 'Cover Image',
-      'name' => 'cover_image'
+      'name' => 'cover_image',
+      'type' => 'image',
+
     ]);
 
     $this->crud->addColumn([
@@ -68,6 +73,17 @@ class AircraftCrudController extends CrudController
             'label' => 'Aircraft Family',
             'name' => 'aircraft_family'
           ]);
+
+          $this->crud->addField([ // image
+            'label' => "Cover Image",
+            'name' => "cover_image",
+            'type' => 'image',
+            'upload' => true,
+          //  $file = Image::make('url'),
+            // 'crop' => true, // set to true to allow cropping, false to disable
+            // 'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
+            // // 'prefix' => 'uploads/images/profile_pictures/' // in case you only store the filename in the database, this text will be prepended to the database value
+        ]);
 
           $this->crud->allowAccess('delete');
         // ------ CRUD COLUMNS
@@ -145,6 +161,7 @@ class AircraftCrudController extends CrudController
 
     public function store(StoreRequest $request)
     {
+
         // your additional operations before save here
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
@@ -154,11 +171,26 @@ class AircraftCrudController extends CrudController
 
     public function update(UpdateRequest $request)
     {
+
+      $aircraft = Aircraft::whereId($request->id)->first();
+      if (starts_with($request->cover_image, 'data:image'))
+      {
+          $image = Image::make($request->image);
+          dd($image);
+          $filename = md5($request->image.time()).'.jpg';
+          $key = 'attachment-image/'.$filename;
+          $file = $image->stream();
+          Storage::disk('public')->put($key, $image->stream(),'public');
+          $url= Storage::disk('public')->url($key);
+          dd($url);
+          $aircraft->storage_image = $url;
+      }
+        $aircraft->msn = $request->msn;
+        $aircraft->aircraft_type = $request->aircraft_type;
+        $aircraft->aircraft_family = $request->aircraft_family;
+        $aircraft->save();
         // your additional operations before save here
-        $redirect_location = parent::updateCrud($request);
-        // your additional operations after save here
-        // use $this->data['entry'] or $this->crud->entry
-        return $redirect_location;
+        return redirect('/admin/aircrafts');
     }
 
   }

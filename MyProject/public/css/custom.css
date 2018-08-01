@@ -1,37 +1,37 @@
 body, html {
-    height: 150%;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 .bg-img {
+  background-position: center;
     /* The image used */
     background-image: url("https://sparta.acumenaviation.ie/img/auth/login_image.png");
 
-    min-height: 630px;
+    min-height: 640px;
 
     /* Center and scale the image nicely */
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /* Add styles to the form container */
 .form-block {
-  
+
     margin: 0 auto;
-    max-width: 400px;
-    padding: 40px;
+    max-width: 500px;
+    padding: 100px;
     background-color: white;
 }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    width: 100%;
-    padding: 18px;
+    width: 110%;
+    padding: 16px;
     margin: 5px 0 25px 0;
     border: none;
     background: #f1f1f1;
@@ -46,10 +46,10 @@ input[type=text]:focus, input[type=password]:focus {
 .btn {
     background-color: #09C1C7;
     color: white;
-    padding: 10px 15px;
+    padding: 15px 30px;
     border: none;
     cursor: pointer;
-    width: 40%;
+    width: 110%;
     opacity: 0.9;
 }
 
