@@ -67,6 +67,14 @@ class OwnerCrudController extends CrudController
       'name' => 'address',
     ]);
 
+    // $this->crud->addColumn([
+    //     'label' => "Aircrafts Owned",
+    //     'type' => 'array_count',
+    //     'name' => 'aircraft_id',
+    //     'entity' => 'owner_name',
+    //     'model' => "App\Models\aircraft_owners"
+    // ]);
+
       $this->crud->allowAccess('delete');
 
 

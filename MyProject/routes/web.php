@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/project-listing', 'ProjectController@index')->name('/project-listing');
 
-// Route::get('/home', 'RegisterController@index')->name('/home');
+ // Route::get('/home', 'HomeController@index')->name('/home');
 
 Route::get('/login/test',function(){
   return view('login');

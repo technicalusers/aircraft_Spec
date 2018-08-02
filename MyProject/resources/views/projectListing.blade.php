@@ -22,9 +22,12 @@
 
   </button>
 
+  <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> -->
+
+
   <div class="dropdown-menu dropdown-menu-right">
-    <button class="dropdown-item" type="button">Edit Profile</button>
-    <button class="dropdown-item" type="button">Settings</button>
+    <a class="dropdown-item" href="http://127.0.0.1:8000/admin/login">logout</a>
+    <!-- <button class="dropdown-item" type="button">Settings</button> -->
   </div>
 </div>
 </div>
@@ -39,14 +42,19 @@
 
   <!-- </div> -->
     @foreach($aircrafts as $aircraft)
-      <div class="d-block p-2 bg-white text-#ECE7E7 border-left">
+      <div class="d-block p-2 bg-white text-#ECE7E7 border-left=padding 2px">
         <div class="row">
             <div class="col-md-1">
           <img src={{ asset($aircraft->cover_image)}} width=70 height=70>
         </div>
         <div class="col-md-11">
-          <p>{{ $aircraft->aircraft_family}}</p>
-          <h>MSN - 1400</h5>
+          <p><b>
+            {{ $aircraft->msn}}<br>
+            {{ $aircraft->aircraft_type}}<br>
+            {{ $aircraft->aircraft_family}}
+
+        </b>  </p>
+
         </div>
       </div>
 
