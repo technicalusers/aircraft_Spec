@@ -1,13 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="bg">
+  <br><br>
+<!-- <div class="container"> -->
+
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-7">
+          <div class="second">
+            <b>
             <div class="card">
+              <div class="fontfamily">
+
                 <div class="card-header">{{ __('Register') }}</div>
 
+
+</div>
                 <div class="card-body">
+
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
@@ -63,15 +73,19 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
+
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
-                            </div>
+                            
                         </div>
+<b>
                     </form>
+                  </div>
                 </div>
             </div>
         </div>
+      </div>
     </div>
-</div>
+<!-- </div> -->
 @endsection

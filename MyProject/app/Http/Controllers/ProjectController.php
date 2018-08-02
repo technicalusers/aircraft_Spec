@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Aircraft;
 class ProjectController extends Controller
 {
     /**
@@ -21,9 +21,18 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // dd(php_info());
-        return view('projectListing');
+
+        $user = $request->user();
+        if($user){
+
+          $aircrafts = Aircraft::get();
+
+          return view('projectListing', compact('aircrafts'));
+        }else{
+          return 'User not logged in';
+        }
+
     }
 }

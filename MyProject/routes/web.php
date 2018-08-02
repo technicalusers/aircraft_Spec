@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/project-listing', 'ProjectController@index')->name('/project-listing');
 
+// Route::get('/home', 'RegisterController@index')->name('/home');
+
 Route::get('/login/test',function(){
   return view('login');
 });
@@ -32,7 +34,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function()
     CRUD::resource('engines', 'Admin\EngineCrudController');
     CRUD::resource('interiors', 'Admin\InteriorCrudController');
     CRUD::resource('landing_gears', 'Admin\Landing_gearCrudController');
-    CRUD::resource('aircraft_owners', 'Admin\Aircraft_ownerCrudController');
+    // CRUD::resource('aircraft_owners', 'Admin\Aircraft_ownerCrudController');
     CRUD::resource('owners', 'Admin\OwnerCrudController');
 
   // [...] other routes
