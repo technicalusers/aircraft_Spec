@@ -3,12 +3,12 @@
 @section('content')
 
 
-
 <section>
   <div class="row">
     <div class="col-md-7">
       <div  class="bg-img">
-<h1><b>AIMS</b></h1>
+<font color="white" font size="6">AIMS</font></b><br><br><br><br><br><br>
+<font color="white" font size="7">Aircraft<br> Management System</font>
       </div>
     </div>
     <div class="col-md-5">
@@ -20,6 +20,7 @@
 							text-shadow: 4px 2px #D3D3D3;
 						}
 </style>
+
           <label for="email">Email</label>
           <input type="text" placeholder="Enter Email" name="email" required>
 
