@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-7">
       <div  class="bg-img">
-          <h1><b>AIMS</b></h1>
+          <div class="fontfamily">AIMS</div>
       </div>
     </div>
     <div class="col-md-5">
@@ -53,9 +53,10 @@
             {{ __('Forgot Your Password?') }}
         </a> -->
     </div>
+    <a href="/register" >Not a User? Register here</a>
   </div>
     </form>
-    <a href="/register" >Not a User? Register here</a>
+
 
   </div>
   </div>
