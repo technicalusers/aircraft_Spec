@@ -59,7 +59,7 @@
                                     </button>
                                     <label class="terms-and-condition" style="">
                                         Don't have an account ?
-                                        <br><a href="{{ url('/register') }}" target="_blank">Register</a></label>
+                                        <br><a href="{{ url('/register') }}">Register</a></label>
 
                                 </div>
 
