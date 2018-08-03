@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-7">
       <div  class="bg-img">
-          <div class="fontfamily">AIMS</div>
+          <div class="fontfamily1">AIMS</div>
       </div>
     </div>
     <div class="col-md-5">
@@ -77,6 +77,10 @@
                             <button type="submit" class="btn btn-primary">
                                 {{ __('Register') }}
                             </button>
+
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
 
                     </div>
 <b>

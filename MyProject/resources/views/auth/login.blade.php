@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-7">
       <div  class="bg-img">
-          <div class="fontfamily">AIMS</div>
+          <div class="fontfamily1">AIMS</div>
       </div>
     </div>
     <div class="col-md-5">
@@ -15,7 +15,7 @@
         @csrf
         <div class="form-block">
     <div class="form-group row">
-      <label for="email" >{{ __('E-Mail Address') }}</label>
+      <label for="email" >{{ __('E-Mail ') }}</label>
 
         <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
         @if ($errors->has('email'))
@@ -46,7 +46,7 @@
     </div>
 
     <div class="form-group row ">
-        <button type="submit" class="btn">
+        <button type="submit" class="btn btn-primary">
             {{ __('Login') }}
         </button>
         <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
