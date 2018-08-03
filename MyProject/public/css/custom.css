@@ -26,8 +26,8 @@ body, html {
     background-image: url("http://eskipaper.com/images/aircraft-wallpaper-2.jpg");
 
     /* Full height */
-    height: 660px;
-    width:100%;
+    height: 678px;
+    width:1286px;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -38,7 +38,12 @@ body, html {
 .bg-img {
   background-position: center;
     /* The image used */
+<<<<<<< HEAD
 background-image: url(" https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/E5A-UKCHl/videoblocks-silhouettes-of-airplanes-fly-high-in-sunset-sky-beautiful-view_rxgajeifnx_thumbnail-full01.png");
+=======
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/E5A-UKCHl/videoblocks-silhouettes-of-airplanes-fly-high-in-sunset-sky-beautiful-view_rxgajeifnx_thumbnail-full01.png");
+
+>>>>>>> e005d89e0275192f2e3b4c39afe415cc702dd232
     min-height: 640px;
 
 
@@ -70,6 +75,7 @@ input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none; */
 }
+<<<<<<< HEAD
  .btn {
      background-color: #09C1C7;
     color: white;
@@ -79,6 +85,11 @@ input[type=text]:focus, input[type=password]:focus {
     width: 110%;
     opacity: 0.9;
  }
+=======
+
+/* Set a style for the submit button */
+
+>>>>>>> e005d89e0275192f2e3b4c39afe415cc702dd232
 
 .btn:hover {
     opacity: 1;

@@ -7,8 +7,13 @@
   <div class="row">
     <div class="col-md-7">
       <div  class="bg-img">
+<<<<<<< HEAD
 <font color="white" font size="6">AIMS</font></b><br><br><br><br><br><br>
 <font color="white" font size="7">Aircraft<br> Management System</font>
+=======
+<font color="white" font size="8">AIMS</font><br><br><br><br><br>
+<font color="white" font size="10">Aircraft<br>Management System</font>
+>>>>>>> e005d89e0275192f2e3b4c39afe415cc702dd232
       </div>
     </div>
     <div class="col-md-5">
