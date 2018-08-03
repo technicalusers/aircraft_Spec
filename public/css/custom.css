@@ -38,16 +38,6 @@ body, html {
 .bg-img {
   background-position: center;
     /* The image used */
-<<<<<<< HEAD
-<<<<<<< HEAD
-background-image: url(" https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/E5A-UKCHl/videoblocks-silhouettes-of-airplanes-fly-high-in-sunset-sky-beautiful-view_rxgajeifnx_thumbnail-full01.png");
-=======
-    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/E5A-UKCHl/videoblocks-silhouettes-of-airplanes-fly-high-in-sunset-sky-beautiful-view_rxgajeifnx_thumbnail-full01.png");
-=======
-    background-image: url("https://cdn.pixabay.com/photo/2014/11/02/10/41/aircraft-513641__340.jpg");
->>>>>>> a8733700d7f2946c81db8516df882c84db7632aa
-
->>>>>>> e005d89e0275192f2e3b4c39afe415cc702dd232
     min-height: 640px;
 
 
@@ -79,28 +69,13 @@ background-image: url(" https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/E5
     padding: 16px;
     margin: 5px 0 25px 0;
     border: none;
-    background: #f1f1f1;
 }
 
 input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
-    outline: none; */
+    outline: none;
 }
-<<<<<<< HEAD
- .btn {
-     background-color: #09C1C7;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    cursor: pointer;
-    width: 110%;
-    opacity: 0.9;
- }
-=======
 
-/* Set a style for the submit button */
-
->>>>>>> e005d89e0275192f2e3b4c39afe415cc702dd232
 
 .btn:hover {
     opacity: 1;

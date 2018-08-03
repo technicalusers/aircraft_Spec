@@ -1,75 +1,84 @@
-
 @extends('layouts.app')
 
+<style>
+    body{
+        padding-left: 0 !important;
+    }
+    header, footer ul{
+        display: none !important;
+    }
+</style>
 @section('content')
 
-<section>
-  <div class="row">
-    <div class="col-md-7">
-      <div  class="bg-img">
-        <font color="white" font size="6">AIMS</font></b><br><br><br><br><br><br>
-        <font color="white" font size="7">Aircraft<br> Management System</font>
-      </div>
-    </div>
-    <div class="col-md-5">
-      <form action="/action_page.php">
-       <div class="form-block"> 
-          <h1 align='Center' text-shadow: 4px 6px="color:gray">Sign In</h1><br>
-            <style>
-            h1{
-              text-shadow: 4px 2px #D3D3D3;
-            }
-</style>
-      <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
-        @csrf
-        <div class="form-block">
-    <div class="form-group row">
-      <label for="email" >{{ __('E-Mail ') }}</label>
+    <section class="login-block">
+        <div class="container-fluid">
+            <div class="row login-wrap flex-not-centered">
+                <div class="col-md-7 col-sm-6 hidden-xs hidden-sm">
+                    <div class="background-image-block flex-centered" style="background-image: url('../../img/login_image.png');height: 630px;">
+                        <div>
+                            <h4>
+                                Aircraft Management System
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12 flex-centered login-form" style="padding-bottom:10px !important;">
+                    <div>
+                        <div class="form-wrap" style="padding-top:10%;">
+                            <form data-parsley-validate=" " class="form-horizontal" role="form" method="POST" action="{{ route('login') }}"  novalidate>
+                                {{ csrf_field() }}
+                                <h5>
+                                    Sign In
+                                </h5>
+                                <p style="margin-bottom: 30px;">
+                                    Fill in your details
+                                </p>
 
-        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-        @if ($errors->has('email'))
-          <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('email') }}</strong>
-          </span>
-        @endif
-    </div>
-    <div class="form-group row">
-      <label for="password">{{ __('Password') }}</label>
+                                <div class="input-group{{ $errors->has('email') ? ' has-error' : '' }} ">
+                                    <input id="email" type="email" placeholder="Enter Email" class=" " data-parsley-error-message="Please enter valid email address"  name="email" value="{{ old('email') }}" required  autofocus>
+                                    @if ($errors->has('email'))
+                                        <span class="help-block danger-flash-message">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                    @endif
+                                </div>
 
-        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-        @if ($errors->has('password'))
-            <span class="invalid-feedback" role="alert">
-                <strong>{{ $errors->first('password') }}</strong>
-            </span>
-        @endif
-    </div>
+                                <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }} ">
+                                    <input  id="password" placeholder="Enter Password" type="password"   class=" " data-parsley-error-message="Please enter password"  name="password" required style="background: transparent">
+                                    @if ($errors->has('password'))
+                                        <span class="help-block danger-flash-message">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
 
-    <div class="form-group row">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-            <label class="form-check-label" for="remember">
-                {{ __('Remember Me') }}
-            </label>
+                                <div class="submit-block">
+                                    <button type="submit" class="login-button">
+                                        Login
+                                    </button>
+                                    <label class="terms-and-condition" style="">
+                                        Don't have an account ?
+                                        <br><a href="{{ url('/register') }}" target="_blank">Register</a></label>
+
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="form-group row ">
-        <button type="submit" class="btn btn-primary">
-            {{ __('Login') }}
-        </button>
-        <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
-            {{ __('Forgot Your Password?') }}
-        </a> -->
-    </div>
-    <a href="/register" >Not a User? Register here</a>
-  </div>
-    </form>
-
-
-  </div>
-  </div>
-
-</section>
-
+    </section>
 @endsection
+
+
+
+
+
+
+

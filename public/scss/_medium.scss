@@ -1,0 +1,247 @@
+@media(min-width:992px) and (max-width:1199px){
+  body{
+
+    /****** header css******/
+    .desktop-header{
+      .navbar-nav{
+        li{
+          a{
+            padding: 15px;
+          }
+        }
+      }
+    }
+
+    /******* Login page scss ********/
+    .login-block{
+      .login-form{
+        .form-wrap{
+          width:350px;
+          form{
+            input[type='email'], input[type='password'], input[type='text']{
+              width: 275px;
+
+            }
+            button[type='submit']{
+              width: 275px;
+              margin: 40px auto 80px;
+            }
+            .input-group{
+              margin: 0 auto;
+            }
+
+          }
+        }
+
+      }
+    }
+
+    /***  user css  ***/
+    .users-listing-section {
+      .filters-container{
+        margin: 22px 0;
+      }
+    }
+
+    /***** form tpe bar******/
+    .form-type-bar{
+      height:73px;
+    }
+
+
+    /**** form T001 scss******/
+    .sp-non-image-block{
+      span{
+        width: 11.7%;
+      }
+    }
+
+    .general-picture-binders-form{
+      ul{
+        li{
+          width: 11.7%;
+
+        }
+      }
+      .primary-btn{
+        margin-left: 6px;
+      }
+
+    }
+
+    /*******modal of t001 ******/
+    #select-general-pictures{
+      .general-picture-binders-modal{
+        ul{
+          li{
+            width: 15.28%;
+          }
+        }
+      }
+
+
+    }
+
+    //modals
+    .section-view, .edit-inspection-block,  .pictorial-finder-detail, #select-general-pictures, .project-edit-modal, .change-lead-modal, .add-new-inspecter, .add-work-order-modal, .change-inspector-modal, .select-general-pictures{
+      .file-upload,.file-delete{
+        padding: 9px 5px;
+        margin:0 4px !important;
+      }
+      .modal-dialog{
+        min-width:315px;
+      }
+      .modal-footer{
+        .file-upload,.file-delete{
+          padding: 9px 30px;
+        }
+        padding:10px 6px !important;
+        button{
+          padding: 9px 30px;
+        }
+        .primary-btn{
+          margin-left: 2px;
+          padding: 8px 15px;
+        }
+      }
+    }
+
+    //t004 left bar
+
+    .left-bar{
+      top:8%;
+    }
+
+    .section-view {
+      .modal-body {
+        .dynamic-form{
+          max-height: 600px;
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+      }
+      .submit-form{
+        position: absolute;
+        .pic-finding-block{
+
+        }
+      }
+
+    }
+
+
+    /****** t007 form *****/
+    .pictorial-finder-detail {
+      .pictorial-finding-components{
+        max-height:700px;
+        overflow: auto;
+      }
+    }
+
+    /***** dashboard scss ******/
+
+    .dashboard-section-1{
+      .left{
+        padding-right: 5px;
+      }
+      .right  {
+        padding-left: 10px;
+        .location-title-row{
+          >div{
+            border: 1px solid #dfe2e5;
+          }
+        }
+      }
+    }
+
+    .dashboard-section-2 {
+      .right{
+        padding-left: 10px;
+      }
+      .select-aircraft-model {
+        text-align: right;
+      }
+      .start-date-filter {
+        float: right;
+      }
+    }
+
+    .dashboard-section-4 {
+      .right{
+        padding-left: 10px;
+      }
+
+    }
+
+
+    /*** request section css****/
+    .requests-section {
+        .reject-btn{
+          //min-width: 90px;
+        }
+        .padding20-xs {
+          padding-left: 20px;
+        }
+        .project-list-grid{
+          margin-bottom: 50px;
+        }
+        .sparta-listing-block{
+          display: flex;
+        }
+        .request-list-block{
+          .filters-containers{
+
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+
+    /***** project listing css******/
+    .projects-index{
+      .project-filters-row{
+        margin-bottom: 20px;
+        .all-project-topbar{
+          li{
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    /******* project view************/
+
+
+
+    // yes or no modal
+    .submit-form-confirmation-modal{
+      .primary-btn{
+        width: 84px;
+      }
+    }
+
+    ///******* form T004 scss*********/
+    //.inspection-block{
+    //  overflow: auto;
+    //  .left-bar{
+    //    bottom:0;
+    //    ul{
+    //      position: absolute;
+    //      bottom:35px;
+    //    }
+    //    .close-index-block{
+    //      position: absolute;
+    //      bottom:24px;
+    //    }
+    //  }
+    //
+    //}
+
+    /***contact block ***/
+    .add-contact-button-block{
+      .align-block{
+        text-align: right;
+      }
+    }
+  }
+}
