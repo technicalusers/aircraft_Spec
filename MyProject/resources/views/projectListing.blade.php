@@ -26,7 +26,7 @@
 
 
   <div class="dropdown-menu dropdown-menu-right">
-    <a class="dropdown-item" href="http://127.0.0.1:8000/admin/login">logout</a>
+    <a class="dropdown-item" href="http://127.0.0.1:8000/logout">logout</a>
     <!-- <button class="dropdown-item" type="button">Settings</button> -->
   </div>
 </div>
@@ -48,13 +48,13 @@
           <img src={{ asset($aircraft->cover_image)}} width=70 height=70>
         </div>
         <div class="col-md-11">
-          <p><b>
-            {{ $aircraft->msn}}<br>
-            {{ $aircraft->aircraft_type}}<br>
-            {{ $aircraft->aircraft_family}}
-
-        </b>  </p>
-
+            <p>
+              <b>
+              {{ $aircraft->msn}}<br>
+              {{ $aircraft->aircraft_type}}<br>
+              {{ $aircraft->aircraft_family}}
+            </b>
+          </p>
         </div>
       </div>
 

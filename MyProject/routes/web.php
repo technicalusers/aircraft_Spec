@@ -12,18 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Auth::routes();
 
-Route::get('/project-listing', 'ProjectController@index')->name('/project-listing');
-
+Route::get('/project-listing', 'ProjectController@index')->name('project-listing');
+Route::get('logout', 'Auth\LoginController@logout');
  // Route::get('/home', 'HomeController@index')->name('/home');
-
-Route::get('/login/test',function(){
-  return view('login');
-});
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function()
 {
@@ -38,4 +34,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function()
     CRUD::resource('owners', 'Admin\OwnerCrudController');
 
   // [...] other routes
+
+
 });

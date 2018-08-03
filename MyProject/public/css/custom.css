@@ -38,13 +38,20 @@ body, html {
 .bg-img {
   background-position: center;
     /* The image used */
-    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/E5A-UKCHl/videoblocks-silhouettes-of-airplanes-fly-high-in-sunset-sky-beautiful-view_rxgajeifnx_thumbnail-full01.png");
+    background-image: url("https://cdn.pixabay.com/photo/2014/11/02/10/41/aircraft-513641__340.jpg");
 
     min-height: 640px;
 
     /* Center and scale the image nicely */
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.headin{
+
+}
+#app{
+  overflow: hidden;
 }
 
 /* Add styles to the form container */
