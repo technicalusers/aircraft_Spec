@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -63,6 +64,8 @@
     </div>
   </div>
     </form>
+    <a href="/register" >Not a User? Register here</a>
+
   </div>
   </div>
 
