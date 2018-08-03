@@ -2,7 +2,7 @@
 @section('content')
 
 
-<div class="container">
+<div class="container-fluid">
 
 
     <span class="d-block p-2 bg-white text-#ECE7E7">

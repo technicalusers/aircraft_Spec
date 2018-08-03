@@ -24,7 +24,7 @@
         @csrf
         <div class="form-block">
     <div class="form-group row">
-      <label for="email" >{{ __('E-Mail Address') }}</label>
+      <label for="email" >{{ __('E-Mail ') }}</label>
 
         <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
         @if ($errors->has('email'))
@@ -55,16 +55,17 @@
     </div>
 
     <div class="form-group row ">
-        <button type="submit" class="btn">
+        <button type="submit" class="btn btn-primary">
             {{ __('Login') }}
         </button>
         <!-- <a class="btn btn-link" href="{{ route('password.request') }}">
             {{ __('Forgot Your Password?') }}
         </a> -->
     </div>
+    <a href="/register" >Not a User? Register here</a>
   </div>
     </form>
-    <a href="/register" >Not a User? Register here</a>
+
 
   </div>
   </div>
